@@ -38,8 +38,8 @@ n = 10
 '''
 class Wire:
     def __init__(self, signal, index):
-        self.__index = index
         self.__signal = signal
+        self.__index = index
 
     def setSignal(self, signal):
         self.__signal = int(signal)
@@ -220,12 +220,12 @@ def main():
     # Fill the inputs list with Dummy Input Wires
     inputs = []
     for i in range((m*n*2) + k):
-        inputs.append(Wire(i, None))
+        inputs.append(Wire(None, i))
 
     # Fill the outputs list with Dummy Output Wires
     outputs = []
     for i in range((m * n) + j):
-        outputs.append(Wire(i, 1))
+        outputs.append(Wire(1, i))
 
     # Fill in the circuit list with Dummy Nand gates 
     input_wire_index = 0
