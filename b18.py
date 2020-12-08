@@ -180,7 +180,6 @@ def b18_simulation(wirelist, circuit, inputs, outputs, j, k):
 
         if in_wire >= len(circuit)*2:
             inputs[in_wire].setSignal(outputs[out_wire].getSignal())
-
         elif in_wire % 2 == 0:
             circuit[int(in_wire/2)].setin1index(out_wire)
             circuit[int(in_wire/2)].nandOperation(outputs)
